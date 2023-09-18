@@ -1,0 +1,47 @@
+apiVersion: v1
+entries:
+  mlrun-ce:
+  - apiVersion: v1
+    created: "2023-09-18T13:55:53.378253+03:00"
+    dependencies:
+    - name: nuclio
+      repository: https://nuclio.github.io/nuclio/charts
+      version: 0.17.13
+    - condition: mlrun.enabled
+      name: mlrun
+      repository: https://v3io.github.io/helm-charts/stable
+      version: 0.9.14
+    - condition: mlrun.enabled
+      name: mpi-operator
+      repository: https://v3io.github.io/helm-charts/stable
+      version: 0.6.0
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 4.0.2
+    - condition: spark-operator.enabled
+      name: spark-operator
+      repository: https://googlecloudplatform.github.io/spark-on-k8s-operator
+      version: 1.1.25
+    - condition: kube-prometheus-stack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 41.7.2
+    - condition: milvus.enabled
+      name: milvus
+      repository: https://milvus-io.github.io/milvus-helm/
+      version: 4.0.31
+    description: MLRUn Open Source Stack
+    digest: d5b6f550e40cb372720cfad4ddb6c61a39cd281a6ebc4d03e7b84f059f0b7d8d
+    home: https://iguazio.com
+    icon: https://www.iguazio.com/wp-content/uploads/2019/10/Iguazio-Logo.png
+    maintainers:
+    - email: adamm@iguazio.com
+      name: Adam Melnick
+    - email: eliyahun@iguazio.com
+      name: Eliyahu Noach
+    name: mlrun-ce
+    urls:
+    - https://GiladShapira94.github.io/helm-testing/mlrun-ce-0.6.2.tgz
+    version: 0.6.2
+generated: "2023-09-18T13:55:53.337277+03:00"
